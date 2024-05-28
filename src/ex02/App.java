@@ -8,3 +8,4 @@ public class App {
         doorman.쫓아내(mouse);
     }
 }
+
