@@ -1,5 +1,6 @@
 package ex03;
 
+
 public class DoormanProxy2 {
 
     private final Doorman doorman;//final을 붙이면 무조건 값이 있어야 됨

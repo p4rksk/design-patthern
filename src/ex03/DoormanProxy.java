@@ -1,5 +1,6 @@
 package ex03;
 
+
 public class DoormanProxy extends Doorman {
 
     public void 쫓아내(Animal a) {
