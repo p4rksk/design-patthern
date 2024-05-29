@@ -11,17 +11,15 @@ public class MariaDB implements DB {
             return -1;
         }
 
-
         if (sql.equals("select")) {
-            System.out.println("query execute : " + path + sql);
+            System.out.println("query execute : " + path + "/" + sql);
             return 1;
         } else {
             System.out.println("query fail : syntax error");
             return -1;
         }
-
-
     }
+
 
     // DBMS 서버 ip 세팅
     public void setUrl(String path) {
