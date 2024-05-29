@@ -7,11 +7,16 @@ import java.util.List;
 
 public class LotteMart implements Mart {
 
-    private List<Customer> customerList = new ArrayList<Customer>(); //구독자 명단
+    private List<Customer> customerList = new ArrayList<>();
 
     @Override
     public void subscribe(Customer customer) {
         customerList.add(customer);
+    }
+
+    @Override
+    public void remove(Customer customer) {
+        customerList.remove(customer);
     }
 
     @Override
@@ -23,21 +28,15 @@ public class LotteMart implements Mart {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
-
         }
-        //.... 알림
+        // ....알림
         notify("LotteMart : 바나나");
     }
 
     @Override
     public void notify(String msg) {
-        customerList.forEach(customer -> customer.update(msg));
-
-    }
-
-    @Override
-    public void remove(Customer customer) {
-        customerList.remove(customer);
+        customerList.forEach(customer -> {
+            customer.update(msg);
+        });
     }
 }

@@ -30,7 +30,5 @@ public class App {
         //4. 출판
         new Thread(() -> lotteMart.received()).start();
         new Thread(() -> eMart.received()).start();
-
-        lotteMart.received();
     }
 }
