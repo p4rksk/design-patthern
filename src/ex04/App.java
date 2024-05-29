@@ -10,6 +10,7 @@ public class App {
         Animal mouse = new Mouse();
         Animal tiger = new Tiger();
         Doorman doorman = Doorman.instance;
+        doorman.쫓아내(tiger);
     }
 }
 
