@@ -1,5 +1,7 @@
 package ex10;
 
+import ex10.command.Command;
+
 public class Button {
     private Command command;
 
